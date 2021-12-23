@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		E530F5222774490600B3B200 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E530F5212774490600B3B200 /* AppDelegate.swift */; };
 		E530F5242774490600B3B200 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E530F5232774490600B3B200 /* SceneDelegate.swift */; };
-		E530F5262774490600B3B200 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E530F5252774490600B3B200 /* ViewController.swift */; };
+		E530F5262774490600B3B200 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E530F5252774490600B3B200 /* LoginViewController.swift */; };
 		E530F5292774490600B3B200 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E530F5272774490600B3B200 /* Main.storyboard */; };
 		E530F52B2774490900B3B200 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E530F52A2774490900B3B200 /* Assets.xcassets */; };
 		E530F52E2774490900B3B200 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E530F52C2774490900B3B200 /* LaunchScreen.storyboard */; };
+		E530F53927745A3F00B3B200 /* FolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E530F53827745A3F00B3B200 /* FolderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E530F51E2774490600B3B200 /* ToDo + FireBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDo + FireBase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E530F5212774490600B3B200 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E530F5232774490600B3B200 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E530F5252774490600B3B200 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E530F5252774490600B3B200 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E530F5282774490600B3B200 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E530F52A2774490900B3B200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E530F52D2774490900B3B200 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E530F52F2774490900B3B200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E530F53827745A3F00B3B200 /* FolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		E530F5202774490600B3B200 /* ToDo + FireBase */ = {
 			isa = PBXGroup;
 			children = (
-				E530F5212774490600B3B200 /* AppDelegate.swift */,
-				E530F5232774490600B3B200 /* SceneDelegate.swift */,
-				E530F5252774490600B3B200 /* ViewController.swift */,
-				E530F5272774490600B3B200 /* Main.storyboard */,
+				E530F536277459B700B3B200 /* Supporting */,
+				E530F53727745A0B00B3B200 /* Controllers */,
+				E530F535277459AA00B3B200 /* View */,
 				E530F52A2774490900B3B200 /* Assets.xcassets */,
-				E530F52C2774490900B3B200 /* LaunchScreen.storyboard */,
 				E530F52F2774490900B3B200 /* Info.plist */,
 			);
 			path = "ToDo + FireBase";
+			sourceTree = "<group>";
+		};
+		E530F535277459AA00B3B200 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E530F5272774490600B3B200 /* Main.storyboard */,
+				E530F52C2774490900B3B200 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E530F536277459B700B3B200 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				E530F5212774490600B3B200 /* AppDelegate.swift */,
+				E530F5232774490600B3B200 /* SceneDelegate.swift */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		E530F53727745A0B00B3B200 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E530F5252774490600B3B200 /* LoginViewController.swift */,
+				E530F53827745A3F00B3B200 /* FolderViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +165,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E530F5262774490600B3B200 /* ViewController.swift in Sources */,
+				E530F53927745A3F00B3B200 /* FolderViewController.swift in Sources */,
+				E530F5262774490600B3B200 /* LoginViewController.swift in Sources */,
 				E530F5222774490600B3B200 /* AppDelegate.swift in Sources */,
 				E530F5242774490600B3B200 /* SceneDelegate.swift in Sources */,
 			);
