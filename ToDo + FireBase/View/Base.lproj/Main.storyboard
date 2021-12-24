@@ -124,6 +124,7 @@
                         <outlet property="loginTextField" destination="082-Y5-ziw" id="62p-zU-hwV"/>
                         <outlet property="registerTextField" destination="9Yo-kX-h2R" id="aQp-R2-5h2"/>
                         <outlet property="warningLabel" destination="b8N-X8-jKl" id="GPR-PI-ge7"/>
+                        <segue destination="GFL-05-MbI" kind="show" identifier="TaskSegue" id="P2j-mt-AZ3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -135,11 +136,11 @@
             <objects>
                 <viewController id="ega-uJ-LnO" customClass="FolderViewController" customModule="ToDo___FireBase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2zi-sM-blg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gSo-lt-26e">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 <color key="separatorColor" systemColor="systemGrayColor"/>
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
@@ -169,10 +170,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Tasks" id="MOx-5y-uad">
+                        <barButtonItem key="leftBarButtonItem" title="SingOut" id="joe-k6-WZC">
+                            <connections>
+                                <action selector="signOut:" destination="ega-uJ-LnO" id="yNY-JN-hC8"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="bSP-nM-y5j">
                             <color key="tintColor" systemColor="systemTealColor"/>
+                            <connections>
+                                <action selector="addTaped:" destination="ega-uJ-LnO" id="lv8-qo-o5I"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="gSo-lt-26e" id="wRS-kb-R6F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ajP-oz-kbb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
