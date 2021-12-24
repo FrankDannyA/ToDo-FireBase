@@ -134,7 +134,7 @@
         <!--Tasks-->
         <scene sceneID="plC-8X-6Wv">
             <objects>
-                <viewController id="ega-uJ-LnO" customClass="FolderViewController" customModule="ToDo___FireBase" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ega-uJ-LnO" customClass="TasksViewController" customModule="ToDo___FireBase" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2zi-sM-blg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -178,7 +178,7 @@
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="bSP-nM-y5j">
                             <color key="tintColor" systemColor="systemTealColor"/>
                             <connections>
-                                <action selector="addTaped:" destination="ega-uJ-LnO" id="lv8-qo-o5I"/>
+                                <action selector="addTaped:" destination="ega-uJ-LnO" id="qHX-K6-joZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

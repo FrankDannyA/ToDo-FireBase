@@ -11,6 +11,7 @@ import Firebase
 class LoginViewController: UIViewController {
     
     let segueIdentifier = "TaskSegue"
+    var ref: DatabaseReference!
 
     @IBOutlet weak var warningLabel: UILabel!
     @IBOutlet weak var loginTextField: UITextField!
@@ -19,6 +20,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         warningLabel.alpha = 0
+        
+        ref = Database.database().reference(withPath: "users")
         
         Auth.auth().addStateDidChangeListener {[weak self] (auth, user) in
             if user != nil{
@@ -54,19 +57,17 @@ class LoginViewController: UIViewController {
     
     @IBAction func registerButtonAction(_ sender: Any) {
         guard let email = loginTextField.text, let password = registerTextField.text , email != "" , password != "" else {
-        displayWarningLabel(withText: "Info is incorrect")
-        return
+            displayWarningLabel(withText: "Info is incorrect")
+            return
         }
-        Auth.auth().createUser(withEmail: email, password: password, completion: {(user, error) in
-            if error == nil {
-                if user != nil {
-                    //self?.performSegue(withIdentifier: "TaskSegue", sender: nil)
-                } else {
-                    print("user is not created")
-                }
-            } else {
+        Auth.auth().createUser(withEmail: email, password: password, completion: {[weak self] (user, error) in
+            guard error == nil, user != nil else {
                 print(error!.localizedDescription)
-            }
+                return }
+            
+            let userRef = self?.ref.child((user?.user.uid)!)
+            userRef?.setValue(["email" : user?.user.email])
+            
         })
     }
 

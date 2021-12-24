@@ -14,8 +14,10 @@
 		E530F5292774490600B3B200 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E530F5272774490600B3B200 /* Main.storyboard */; };
 		E530F52B2774490900B3B200 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E530F52A2774490900B3B200 /* Assets.xcassets */; };
 		E530F52E2774490900B3B200 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E530F52C2774490900B3B200 /* LaunchScreen.storyboard */; };
-		E530F53927745A3F00B3B200 /* FolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E530F53827745A3F00B3B200 /* FolderViewController.swift */; };
+		E530F53927745A3F00B3B200 /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E530F53827745A3F00B3B200 /* TasksViewController.swift */; };
 		E530F53D27746C3500B3B200 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E530F53C27746C3500B3B200 /* GoogleService-Info.plist */; };
+		E530F54027759EFB00B3B200 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E530F53F27759EFB00B3B200 /* Person.swift */; };
+		E530F54227759F0800B3B200 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = E530F54127759F0800B3B200 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +31,10 @@
 		E530F52A2774490900B3B200 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E530F52D2774490900B3B200 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E530F52F2774490900B3B200 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E530F53827745A3F00B3B200 /* FolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewController.swift; sourceTree = "<group>"; };
+		E530F53827745A3F00B3B200 /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 		E530F53C27746C3500B3B200 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E530F53F27759EFB00B3B200 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		E530F54127759F0800B3B200 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		F4D4F849618A3C1A1E780AA1 /* Pods_ToDo___FireBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_ToDo___FireBase.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -76,6 +80,7 @@
 		E530F5202774490600B3B200 /* ToDo + FireBase */ = {
 			isa = PBXGroup;
 			children = (
+				E530F53E27759ED900B3B200 /* Models */,
 				E530F536277459B700B3B200 /* Supporting */,
 				E530F53727745A0B00B3B200 /* Controllers */,
 				E530F535277459AA00B3B200 /* View */,
@@ -108,9 +113,18 @@
 			isa = PBXGroup;
 			children = (
 				E530F5252774490600B3B200 /* LoginViewController.swift */,
-				E530F53827745A3F00B3B200 /* FolderViewController.swift */,
+				E530F53827745A3F00B3B200 /* TasksViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E530F53E27759ED900B3B200 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E530F53F27759EFB00B3B200 /* Person.swift */,
+				E530F54127759F0800B3B200 /* Task.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FEB270AF934FA7266DE5E74C /* Frameworks */ = {
@@ -237,9 +251,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E530F53927745A3F00B3B200 /* FolderViewController.swift in Sources */,
+				E530F53927745A3F00B3B200 /* TasksViewController.swift in Sources */,
 				E530F5262774490600B3B200 /* LoginViewController.swift in Sources */,
 				E530F5222774490600B3B200 /* AppDelegate.swift in Sources */,
+				E530F54027759EFB00B3B200 /* Person.swift in Sources */,
+				E530F54227759F0800B3B200 /* Task.swift in Sources */,
 				E530F5242774490600B3B200 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
